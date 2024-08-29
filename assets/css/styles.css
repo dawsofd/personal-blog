@@ -14,31 +14,16 @@ header {
 
 }
 
-.left-logo {
-    float: left;
-    width: 50%;
-    border-right-style: double;
-    border-width: 10px;
-
-}
-
-.circle-body {
-    background: linear-gradient(#FFA500,#A9A9A9);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-}
-
-.right-input {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    float: right;
-    width: 50%;
-
-}
-
+.dark {
+    background-color:#243447;
+    height: 100vh;
+    color: #bebebe
+   
+  }
+  
+.light {
+    background-color: #f0ead6;
+    color: black;
+    height: 100vh;
+  }
+  
