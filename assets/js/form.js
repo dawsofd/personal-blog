@@ -1,26 +1,29 @@
-const formInput = document.querySelector('.form-input');
-const formName = document.querySelector('.form-name');
-const formTitle = document.querySelector('.form-title');
-const formText =  document.querySelector('.form-text');
+const formSubmission = document.getElementById('form-submission')
 
-function submitInput(event) {
-    event.errorIncomplete();
-    if (formName.value.trim() === '' || formTitle.value.trim() === '' || formText.value.trim() === '') {
-        alert('Error! Please complete all fields.');
-    } 
-    else {
-      const userInput = {
-        formName: formName.value.trim(),
-        formTitle: formTitle.value.trim(),
-        formText: formText.value.trim()
-      };
-      localStorage.setItem('formName', JSON.stringify(formName));
-      window.location.href = 'http://127.0.0.1:5500/blog.html#';
+formSubmission.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    }
-};
+  const userName = document.getElementById('userName').value;
+  const title = document.getElementById('title').value;
+  const content = document.getElementById('content').value;
 
-if (formInput) {
-    formInput.addEventListener('submit', userInput);
-    console.log(formInput);
-}
+  if (userName.trim() === '' || title.trim() === '' || content.trim() === '') {
+    alert('Error! Please complete all fields.');
+    return;
+  }
+
+  const submission = {
+    userName,
+    title,
+    content
+  };
+
+  let submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+
+  submissions.push(submission);
+
+  localStorage.setItem('submissions', JSON.stringify(submissions));
+
+  window.location.href = './blog.html';
+
+});

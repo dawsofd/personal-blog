@@ -8,7 +8,6 @@
     <title>Dawson's Blog</title>
   </head>
 
-  <body>
     <header>
       <button id="theme-switcher">
         <span>☀️</span>
@@ -24,13 +23,13 @@
     <div class="right-input">
       <div class="input-form">
         <h1>What's On Your Mind?</h1>
-        <form action="./blog.html" method="POST" class="form-input">
-          <label for="form-input-username" class="username">Username:</label><br>
-          <input type="text" class="input-username"><br>
-          <label for="form-input-title" class="title">Title:</label><br>
-          <input type="text" class="input-title"><br>
-          <label for="form-input-content" class="content">Content:</label><br>
-          <input type="text" class="input-content"><br>
+        <form id="form-submission" class="form-submission">
+          <label for="userName">Username:</label>
+          <input type="text" class="userName-text" id="userName">
+          <label for="title">Title:</label>
+          <input type="text" class="title-text" id="title">
+          <label for="content">Content:</label>
+          <input type="text" class="content-text" id="content">
           <input type="submit" value="Submit" class="submit-button">
         </form>
       </div>

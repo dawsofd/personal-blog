@@ -16,14 +16,12 @@ header {
 
 .dark {
     background-color:#243447;
-    height: 100vh;
     color: #bebebe
    
   }
   
 .light {
     background-color: #f0ead6;
-    color: black;
-    height: 100vh;
+    color: #333333;
   }
   
