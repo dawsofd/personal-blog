@@ -1,5 +1,88 @@
-header h1 {
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-style: double;
+    border-width: 10px;
 }
+
+button {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: rgb(135, 127, 127);
+    margin-right: 10px;
+}
+
+.back-page {
+    float: right;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.back-page:after {
+    display: flex;
+    content: '←Back';
+    margin: 10px;
+}
+
+#back-click {
+    visibility: hidden;
+    align-items: flex-end;
+}
+
+main {
+    width: 100%;
+}
+
+
+.submission {
+    border-style: solid;
+    margin: 5px;
+    padding: 1px;
+}
+
+h2 {
+    border-bottom: solid;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    border-top-style: double;
+    border-width: 10 px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    margin: 2 px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+    width: 30%;
+    font-size: 12px;
+}
+
