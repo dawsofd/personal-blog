@@ -1,17 +1,13 @@
-const themeSwitcher = document.querySelector('#theme-switcher');
-const container = document.querySelector('html');
+const themeSwitcher = document.getElementById('theme-switcher');
 
-let mode = 'light';
+themeSwitcher.addEventListener('change', function() {
+  const isChecked = this.checked;
 
-themeSwitcher.addEventListener('click', function() {
-  if (mode === 'light') {
-    mode === 'dark';
-    container.setAttribute('class', 'dark');
-    themeSwitcher.textContent = '🌙';
+  if (isChecked === true) {
+    document.body.classList.toggle('dark-mode');
   }
   else {
-    mode === 'light';
-    container.setAttribute('class', 'light');
-    themeSwitcher.textContent = '☀️';
+    document.body.classList.remove('dark-mode')
   }
 });
+

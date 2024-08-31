@@ -14,14 +14,15 @@ header {
 
 }
 
-.dark {
+.dark-mode {
     background-color:#243447;
     color: #bebebe
    
   }
   
-.light {
+.light-mode {
     background-color: #f0ead6;
     color: #333333;
   }
-  
+
+
